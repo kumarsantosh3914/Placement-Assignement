@@ -1,0 +1,93 @@
+/* Ensure all elements include padding and borders within their specified width */
+body {
+    box-sizing: border-box;
+  }
+  
+  /* Inherit box-sizing and reset margin and padding for all elements and pseudo-elements */
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for the entire content with a maximum width of 1400px */
+  .wrapper-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Center-align the heading and add some bottom padding */
+  .heading {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  /* Center-align the table within its container */
+  table {
+    margin: auto;
+  }
+  
+  /* Add borders, padding, and center-align content for table cells and rows */
+  td,
+  th,
+  tr {
+    border: 2px solid black;
+    padding: 2px;
+    text-align: center;
+  }
+  
+  /* Remove borders for certain elements */
+  .no-border {
+    border: none;
+  }
+  
+  /* Set background colors for different sections */
+  .bg-red {
+    background-color: #ff9999;
+  }
+  
+  .bg-blue {
+    background-color: #99ccff;
+  }
+  
+  .bg-yellow {
+    background-color: #fdff8c;
+  }
+  
+  .bg-green {
+    background-color: #9bff99;
+  }
+  
+  /* Reset font weight for table headers */
+  th {
+    font-weight: normal;
+  }
+  
+  /* Adjust padding for the starting row of a green group */
+  .green-row-start {
+    padding-top: 6px;
+  }
+  
+  /* Create a positioning context for the group */
+  .group {
+    position: relative;
+  }
+  
+  /* Center-align text within the group */
+  .group p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Position the down arrow within the group */
+  .down-arrow {
+    position: absolute;
+    left: 25px;
+    top: 33px;
+  }
+  

@@ -1,0 +1,124 @@
+/* Set the box model for all elements */
+body {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Reset margins, paddings, and inherit the box model for all elements and pseudo-elements */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Set padding, minimum height, background color, and overflow properties for the container */
+container {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #c4ebf9;
+  overflow-x: hidden;
+}
+
+/* Style the navbar with flex layout, alignment, height, padding, background color, and border radius */
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
+  background-color: #02bfb1;
+  border-radius: 5px;
+}
+
+/* Style the navigation list within the navbar with flex layout, list style, and gap */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Style the main content section with flex layout, gap, minimum height, and margin top */
+.main {
+  display: flex;
+  gap: 20px;
+  min-height: 80vh;
+  margin-top: 20px;
+}
+
+/* Style the aside element with flex layout, alignment, border radius, flex grow, minimum height, and background color */
+aside {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 5px;
+  flex-grow: 1;
+  min-height: 80px;
+  background-color: #6edb6e;
+}
+
+/* Style the article element with flex layout, direction, alignment, gap, flex grow, padding, and border radius */
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-grow: 2;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fbb04c;
+}
+
+/* Style the text within the article with maximum and minimum widths */
+.article-text {
+  max-width: 600px;
+  min-width: 100px;
+}
+
+/* Style the image container within the article with flex layout, alignment, gap, and flex wrap */
+.article-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Style the article image with a specific width */
+.article-img {
+  width: 250px;
+}
+
+/* Media query for screens up to 478px */
+@media only screen and (max-width: 478px) {
+  /* Adjust the gap within the main section */
+  .main {
+    gap: 10px;
+  }
+
+  /* Adjust flex grow for the aside element */
+  aside {
+    flex-grow: 1;
+  }
+  
+  /* Adjust flex grow, padding, and width for the article element */
+  article {
+    flex-grow: 1;
+    padding: 10px;
+  }
+
+  /* Adjust the width of the article image */
+  .article-img {
+    width: 160px;
+  }
+}
+
+/* Media query for screens up to 576px */
+@media only screen and (max-width: 576px) {
+  /* Adjust the width of the article image */
+  .article-img {
+    width: 180px;
+  }
+}

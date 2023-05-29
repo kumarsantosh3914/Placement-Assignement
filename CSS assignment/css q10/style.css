@@ -1,0 +1,109 @@
+/* Reset margins, paddings, and inherit the box model for all elements and pseudo-elements */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Enable smooth scrolling behavior for the HTML element */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set up a container with flex layout, vertical direction, gap, overflow, and padding */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+/* Style the navbar with flex layout, center alignment, gap, and full width */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Style the left section of the navbar with background color, width, height, and border radius */
+.nav-left {
+    background-color: #ababa9;
+    width: 60%;
+    height: 120px;
+    border-radius: 5px;
+}
+
+/* Style the right section of the navbar with background color, width, height, and border radius */
+.nav-right {
+    background-color: #ababa9;
+    width: 60%;
+    height: 120px;
+    border-radius: 5px;
+}
+
+/* Style the main content section with flex layout, vertical direction, and gap */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style the hero element with full width, height, background color, and border radius */
+.hero-element {
+    width: 100%;
+    height: 300px;
+    background-color: #797977;
+    border-radius: 5px;
+}
+
+/* Style the cards section with flex layout, gap, full width, and stretch alignment */
+.cards {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Style individual card elements with background color, height, flex grow, and border radius */
+.card {
+    background-color: #b0d5ed;
+    height: 200px;
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+/* Style the footer element with full width, height, background color, and border radius */
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: #c5c6c0;
+    border-radius: 5px;
+}
+
+/* Media query for screens up to 478px */
+@media only screen and (max-width: 478px) {
+    /* Adjust the direction of the cards to column */
+    .cards {
+        flex-direction: column;
+    }
+
+    /* Adjust the height of the cards */
+    .card {
+        height: 100px;
+    }
+
+    /* Adjust the height of the left and right sections of the navbar */
+    .nav-left, .nav-right {
+        height: 80px;
+    }
+
+    /* Adjust the height of the hero element */
+    .hero-element {
+        height: 200px;
+    }
+}
