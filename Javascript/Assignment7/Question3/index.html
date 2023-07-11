@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github User Finder</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Github User Find</h1>
+        <form id="search-form" class="search-form">
+            <input type="text" id="username-input" placeholder="Enter a GitHub username">
+            <button type="submit">Get Data</button>
+        </form>
+        <div id="user-info" class="user-info">
+            <div class="img">
+                <img id="avatar" class="avatar" src="" alt="Avatar">
+            </div>
+            <div class="info-details">
+                <div class="info-left">
+                    <h2 class="info info-button" id="name">Name: </h2>
+                    <!-- <a href="#" id="portfolio" class="info">Portfolio: </a> -->
+                    <h2 class="info info-button" id="portfolio">Portfolio: </h2>
+                    <h2 class="info info-button" id="location">Location: </h2>
+                </div>
+                <div class="info-right">
+                    <h2 class="info info-button" id="public-repo">Public Repos: </h2>
+                    <h2 class="info info-button" id="follower">Follower: </h2>
+                    <h2 class="info info-button" id="bio">Bio: </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

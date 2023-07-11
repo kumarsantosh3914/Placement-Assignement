@@ -1,0 +1,148 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #383CC1;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #120E43;
+  }
+
+  .quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #120E43;
+  }
+  
+  .leaderboard-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  #question {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  button {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #options {
+    margin-top: 9px;
+    margin-left: 200px;
+    width: 50px;
+  }
+  
+  #popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #leaderboard {
+    margin-top: 10px;
+  }
+  
+  #leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #leaderboard table th,
+  #leaderboard table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  } */
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #120E43;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+  
+  #quiz {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #120E43;
+    align-items: center;
+  }
+  h2 {
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  p {
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 80px;
+    margin-left: 160px;
+  }
+
+  select {
+    margin-left: 160px;
+    padding: 10px 55px;
+  }
+
+  #result {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  

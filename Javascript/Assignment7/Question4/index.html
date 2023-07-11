@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Display</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #383CC1;
+        }
+
+        .product {
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 40px;
+            background-color: #000;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="productContainer"></div>
+
+    <script>
+        // Fetch product data from API
+        fetch("https://fakestoreapi.com/products")
+            .then(response => response.json())
+            .then(data => displayProducts(data))
+            .catch(error => console.log(error));
+
+        // Display products in UI
+        function displayProducts(products) {
+            const container = document.getElementById("productContainer");
+
+            products.forEach(product => {
+                const productElement = document.createElement("div");
+                productElement.classList.add("product");
+
+                const imageElement = document.createElement("img");
+                imageElement.src = product.image;
+                productElement.appendChild(imageElement);
+
+                const titleElement = document.createElement("h3");
+                titleElement.textContent = product.title;
+                productElement.appendChild(titleElement);
+
+                const priceElement = document.createElement("p");
+                priceElement.textContent = "Price: $" + product.price;
+                productElement.appendChild(priceElement);
+
+                // Add "Add to Cart" button
+                const buttonElement = document.createElement("button");
+                buttonElement.textContent = "Add to Cart";
+                buttonElement.addEventListener("click", () => addToCart(product));
+                productElement.appendChild(buttonElement);
+
+                container.appendChild(productElement);
+            });
+        }
+
+        function addToCart(product) {
+            // Replace this with your own logic for adding the product to the cart
+            console.log("Product added to cart:", product);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Product Showcase</h1>
+        <div id="product-list" class="product-list"></div>
+    </div>
+
+    Cart Modal
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cart</h2>
+            <div id="cart-items" class="cart-items"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Display</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product {
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .cart {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+        }
+
+        .cart-item {
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .cart-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="productContainer">
+        <!-- Product cards will be added dynamically here -->
+    </div>
+
+    <div class="cart">
+        <h2>CartItems</h2>
+        <div class="items">
+            <div id="cartItems">
+                <!-- Cart items will be added dynamically here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cart = [];
+
+        // Fetch product data from API
+        fetch("https://fakestoreapi.com/products")
+            .then(response => response.json())
+            .then(data => displayProducts(data))
+            .catch(error => console.log(error));
+
+        // Display products in UI
+        function displayProducts(products) {
+            const container = document.getElementById("productContainer");
+
+            products.forEach(product => {
+                const productElement = document.createElement("div");
+                productElement.classList.add("product");
+
+                const imageElement = document.createElement("img");
+                imageElement.src = product.image;
+                productElement.appendChild(imageElement);
+
+                const titleElement = document.createElement("h3");
+                titleElement.textContent = product.title;
+                productElement.appendChild(titleElement);
+
+                const priceElement = document.createElement("p");
+                priceElement.textContent = "Price: $" + product.price;
+                productElement.appendChild(priceElement);
+
+                const addToCartButton = document.createElement("button");
+                addToCartButton.textContent = "Add to Cart";
+                addToCartButton.addEventListener("click", () => addToCart(product));
+                productElement.appendChild(addToCartButton);
+
+                container.appendChild(productElement);
+            });
+        }
+
+        // Add product to cart
+        function addToCart(product) {
+            cart.push(product);
+            updateCartUI();
+        }
+
+        // Update cart UI
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById("cartItems");
+            cartItemsContainer.innerHTML = "";
+
+            cart.forEach(product => {
+                const cartItem = document.createElement("div");
+                cartItem.classList.add("cart-item");
+
+                const imageElement = document.createElement("img");
+                imageElement.src = product.image;
+                cartItem.appendChild(imageElement);
+
+                const titleElement = document.createElement("h4");
+                titleElement.textContent = product.title;
+                cartItem.appendChild(titleElement);
+
+                const priceElement = document.createElement("p");
+                priceElement.textContent = "Price: $" + product.price;
+                cartItem.appendChild(priceElement);
+
+                cartItemsContainer.appendChild(cartItem);
+            });
+        }
+    </script>
+</body>
+
+</html>

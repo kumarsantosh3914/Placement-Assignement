@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Quiz App</h2>
+        <div class="quiz-container">
+            <div id="question"></div>
+            <div id="options"></div>
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+    </div>
+
+    <div id="popup"></div>
+
+    <div class="leaderboard-container">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz Web Application</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quiz Web Application</h1>
+        <div id="quiz">
+            <h2>Question 1:</h2>
+            <p>What is the capital of France?</p>
+            <input class="drop" type="radio" name="q1" value="A">A. London<br>
+            <input class="drop" type="radio" name="q1" value="B">B. Paris<br>
+            <input class="drop" type="radio" name="q1" value="C">C. Rome<br>
+            <input class="drop" type="radio" name="q1" value="D">D. Madrid<br>
+            <br>
+            <h2>Question 2:</h2>
+            <p>Who painted the Mona Lisa?</p>
+            <input class="drop" type="radio" name="q2" value="A">A. Vincent van Gogh<br>
+            <input class="drop" type="radio" name="q2" value="B">B. Leonardo da Vinci<br>
+            <input class="drop" type="radio" name="q2" value="C">C. Pablo Picasso<br>
+            <input class="drop" type="radio" name="q2" value="D">D. Michelangelo<br>
+            <br>
+            <button onclick="checkAnswers()">Submit Answers</button>
+        </div>
+        <div id="leaderboard" style="display: none;">
+            <h2>Leaderboard:</h2>
+            <table id="scores">
+                <tr>
+                    <th>Name</th>
+                    <th>Correct</th>
+                    <th>Incorrect</th>
+                </tr>
+            </table>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>Result:</h2>
+            <p>You answered <span id="correct"></span> questions correctly.</p>
+            <p>You answered <span id="incorrect"></span> questions incorrectly.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
