@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    margin: 1rem 16rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 8%;
+}
+
+nav a {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav button {
+    padding: 15px 40px;
+    background-color: #383CC1;
+    border-radius: 5px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.main-left {
+  font-family: "Poppins", "san-serif";
+}
+
+main > div > h1 > span {
+  color: #1892f7;
+}
+
+#card-issuers {
+  color: #1892f7;
+}
+
+.apply-img {
+  width: 16rem;
+  cursor: pointer;
+}
+
+main > div > img {
+  width: 20rem;
+}
+
+video {
+  width: 510px;
+}
+
+@media screen and (max-width: 620px) {
+  body {
+    margin: 10px 20px;
+  }
+
+  a {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}

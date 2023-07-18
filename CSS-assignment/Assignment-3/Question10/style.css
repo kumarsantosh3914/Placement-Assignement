@@ -1,0 +1,43 @@
+body {
+    background-color: #0D0D0D;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 1200px; /* Set the maximum width of the dashboard */
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  #student-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  #student-table th,
+  #student-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Styling for small screens */
+  @media screen and (max-width: 768px) {
+    #student-table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    #student-table th,
+    #student-table td {
+      white-space: normal;
+      overflow: visible;
+    }
+  }
+  
