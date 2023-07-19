@@ -40,7 +40,7 @@ const person = {
   }
 };
 
-console.log(person.fullName()); // Output: John Doe
+console.log(person.fullName()); // Output: Santosh Kumar
 ```
 
 In this example, the `fullName` method uses the `this` keywod to access the `firstName` and `lastName` properties of the `person` object. By using `this`, we can refer to the current object(`person`) and access its properties to construct the full name.
